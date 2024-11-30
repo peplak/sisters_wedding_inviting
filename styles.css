@@ -22,40 +22,41 @@ body {
 /* Цветы в углах */
 .flowers {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     background: url('https://png.klev.club/uploads/posts/2024-06/png-klev-club-yftq-p-buket-tsvetov-shikarnii-png-23.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+/* Цветы по углам, позиционирование изменено для вертикальной ориентации */
 .flowers-top-left {
-    top: -60px;
-    left: -80px;
-    transform: rotate(360deg); /* Угол разворота для верхнего левого */
+    top: 10px;
+    left: -40px;
+    transform: rotate(360deg);
 }
 
 .flowers-top-right {
-    top: -60px;
-    right: -80px;
-    transform: rotate(270deg); /* Угол разворота для верхнего правого */
+    top: 10px;
+    right: -40px;
+    transform: rotate(270deg);
 }
 
 .flowers-bottom-left {
-    bottom: -60px;
-    left: -80px;
-    transform: rotate(180deg); /* Угол разворота для нижнего левого */
+    bottom: 10px;
+    left: -40px;
+    transform: rotate(180deg);
 }
 
 .flowers-bottom-right {
-    bottom: -60px;
-    right: -80px;
-    transform: rotate(450deg); /* Угол разворота для нижнего правого */
+    bottom: 10px;
+    right: -40px;
+    transform: rotate(450deg);
 }
 
 /* Основной контент */
 .content {
-    max-width: 600px;
+    max-width: 500px;
     margin: auto;
     text-align: center;
     color: #333;
@@ -63,39 +64,39 @@ body {
 }
 
 .title {
-    font-size: 2.5em;
+    font-size: 3em;
     font-family: 'Playfair Display SC', serif;
     color: #b71c1c;
+    margin-bottom: 10px;
 }
 
 .names {
     display: flex;
-    justify-content: center;
-    gap: 5px;
-    font-size: 3em;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 3.5em;
     color: #880e4f;
     margin: 0;
-    padding: 0;
 }
 
 .name {
     font-family: 'Great Vibes', cursive;
-    font-size: 2em;
+    font-size: 3em;
     margin: 0;
-    padding: 0;
 }
 
 .and {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.5em;
+    font-size: 3.5em;
     color: #d32f2f;
     margin: 0;
-    padding: 0;
 }
 
 .details, .subtitle, .address-text {
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #424242;
+    margin-top: 10px;
 }
 
 /* Разделители */
@@ -103,19 +104,19 @@ body {
     height: 2px;
     width: 80%;
     background: #d32f2f;
-    margin: 5px auto;
+    margin: 20px auto;
 }
 
 .separator-short {
     height: 1px;
-    width: 40%;
+    width: 50%;
     background: #b71c1c;
     margin: 10px auto;
 }
 
 /* Карта */
 .map-container {
-    margin-top: 0px;
+    margin-top: 30px;
     border: 2px solid #b71c1c;
     border-radius: 5px;
     overflow: hidden;
@@ -123,25 +124,29 @@ body {
 
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
     .title {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
     .names {
         font-size: 2.5em;
-        gap: 10px;
+        flex-direction: column;
     }
 
     .name {
-        font-size: 1.5em;
+        font-size: 2.5em;
     }
 
     .and {
-        font-size: 2em;
+        font-size: 3em;
     }
 
     .details, .subtitle, .address-text {
-        font-size: 1.1em;
+        font-size: 1.3em;
     }
 
     .map-container {
@@ -150,52 +155,53 @@ body {
 
     /* Цветы для мобильных */
     .flowers {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
 
     .flowers-top-left {
-        top: -40px;
-        left: -60px;
-        transform: rotate(360deg);
+        top: -10px;
+        left: -30px;
     }
 
     .flowers-top-right {
-        top: -40px;
-        right: -60px;
-        transform: rotate(270deg);
+        top: -10px;
+        right: -30px;
     }
 
     .flowers-bottom-left {
-        bottom: -40px;
-        left: -60px;
-        transform: rotate(180deg);
+        bottom: -10px;
+        left: -30px;
     }
 
     .flowers-bottom-right {
-        bottom: -40px;
-        right: -60px;
-        transform: rotate(450deg);
+        bottom: -10px;
+        right: -30px;
     }
 }
 
 /* Адаптивность для маленьких экранов */
 @media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
     .title {
-        font-size: 1.5em;
+        font-size: 2.2em;
     }
 
     .names {
         font-size: 2em;
         flex-direction: column;
+        gap: 5px;
     }
 
     .name, .and {
-        font-size: 1.5em;
+        font-size: 2.2em;
     }
 
     .details, .subtitle, .address-text {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 
     .map-container {
@@ -204,31 +210,27 @@ body {
 
     /* Цветы для маленьких экранов */
     .flowers {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
     }
 
     .flowers-top-left {
-        top: -30px;
-        left: -50px;
-        transform: rotate(360deg);
+        top: 0;
+        left: -20px;
     }
 
     .flowers-top-right {
-        top: -30px;
-        right: -50px;
-        transform: rotate(270deg);
+        top: 0;
+        right: -20px;
     }
 
     .flowers-bottom-left {
-        bottom: -30px;
-        left: -50px;
-        transform: rotate(180deg);
+        bottom: 0;
+        left: -20px;
     }
 
     .flowers-bottom-right {
-        bottom: -30px;
-        right: -50px;
-        transform: rotate(450deg);
+        bottom: 0;
+        right: -20px;
     }
 }
