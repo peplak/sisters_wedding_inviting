@@ -16,14 +16,14 @@ body {
     width: 100%;
     height: 100%;
     text-align: center;
-    overflow: hidden;
+    padding: 20px;
 }
 
 /* Цветы в углах (обычные для десктопа) */
 .flowers {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 250px; /* Нормальный размер цветков на экранах */
+    height: 250px;
     background: url('https://png.klev.club/uploads/posts/2024-06/png-klev-club-yftq-p-buket-tsvetov-shikarnii-png-23.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,31 +32,31 @@ body {
 /* Цветы по углам */
 .flowers-top-left {
     top: 10px;
-    left: -20px;
+    left: -50px;
     transform: rotate(360deg);
 }
 
 .flowers-top-right {
     top: 10px;
-    right: -20px;
+    right: -50px;
     transform: rotate(270deg);
 }
 
 .flowers-bottom-left {
     bottom: 10px;
-    left: -20px;
+    left: -50px;
     transform: rotate(180deg);
 }
 
 .flowers-bottom-right {
     bottom: 10px;
-    right: -20px;
+    right: -50px;
     transform: rotate(450deg);
 }
 
 /* Основной контент */
 .content {
-    max-width: 500px;
+    max-width: 100%;
     margin: auto;
     text-align: center;
     color: #333;
@@ -64,7 +64,7 @@ body {
 }
 
 .title {
-    font-size: 3em;
+    font-size: 3.5em;
     font-family: 'Playfair Display SC', serif;
     color: #b71c1c;
     margin-bottom: 10px;
@@ -75,20 +75,20 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    font-size: 3.5em;
+    font-size: 3em;
     color: #880e4f;
     margin: 0;
 }
 
 .name {
     font-family: 'Great Vibes', cursive;
-    font-size: 3em;
+    font-size: 3.5em;
     margin: 0;
 }
 
 .and {
     font-family: 'Great Vibes', cursive;
-    font-size: 3.5em;
+    font-size: 4em;
     color: #d32f2f;
     margin: 0;
 }
@@ -123,10 +123,62 @@ body {
 }
 
 /* Адаптивность для мобильных устройств */
+@media (max-width: 1024px) {
+    /* Цветы становятся меньше на планшетах */
+    .flowers {
+        width: 150px;
+        height: 150px;
+    }
+
+    .flowers-top-left {
+        top: 20px;
+        left: -30px;
+    }
+
+    .flowers-top-right {
+        top: 20px;
+        right: -30px;
+    }
+
+    .flowers-bottom-left {
+        bottom: 20px;
+        left: -30px;
+    }
+
+    .flowers-bottom-right {
+        bottom: 20px;
+        right: -30px;
+    }
+
+    .title {
+        font-size: 3em;
+    }
+
+    .names {
+        font-size: 2.8em;
+    }
+
+    .name {
+        font-size: 3em;
+    }
+
+    .and {
+        font-size: 3.5em;
+    }
+
+    .details, .subtitle, .address-text {
+        font-size: 1.3em;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+}
+
+/* Адаптивность для мобильных экранов */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
-        overflow: visible; /* Убираем overflow для мобильных устройств */
     }
 
     .title {
@@ -134,8 +186,7 @@ body {
     }
 
     .names {
-        font-size: 2.5em;
-        flex-direction: column;
+        font-size: 2.2em;
     }
 
     .name {
@@ -147,14 +198,10 @@ body {
     }
 
     .details, .subtitle, .address-text {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
-    .map-container {
-        height: 250px;
-    }
-
-    /* Мелкие цветы для мобильных */
+    /* Цветы становятся совсем маленькими */
     .flowers {
         width: 100px;
         height: 100px;
@@ -179,16 +226,20 @@ body {
         bottom: -10px;
         right: -20px;
     }
+
+    .map-container {
+        height: 220px;
+    }
 }
 
-/* Адаптивность для маленьких экранов */
+/* Для самых маленьких экранов */
 @media (max-width: 480px) {
     .container {
         padding: 10px;
     }
 
     .title {
-        font-size: 2.2em;
+        font-size: 2em;
     }
 
     .names {
@@ -206,10 +257,10 @@ body {
     }
 
     .map-container {
-        height: 200px;
+        height: 180px;
     }
 
-    /* Мелкие цветы для самых маленьких экранов */
+    /* Цветы для самых маленьких экранов */
     .flowers {
         width: 80px;
         height: 80px;
