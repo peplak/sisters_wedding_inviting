@@ -21,82 +21,100 @@ body {
 /* Цветы в углах */
 .flowers {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    background: url('https://png.klev.club/uploads/posts/2024-06/png-klev-club-yftq-p-buket-tsvetov-shikarnii-png-23.png') no-repeat center center;
+    width: 300px;
+    height: 300px;
+    background: url('https://png.klev.club/uploads/posts/2024-06/png-klev-club-yftq-p-buket-tsvetov-shikarnii-png-23.png');
     background-size: cover;
-    opacity: 0.7;
+    background-repeat: no-repeat;
 }
 
 .flowers-top-left {
-    top: 20px;
-    left: 20px;
+    top: -60px;
+    left: -80px;
+    transform: rotate(360deg); /* Угол разворота для верхнего левого */
 }
 
 .flowers-top-right {
-    top: 20px;
-    right: 20px;
+    top: -60px;
+    right: -80px;
+    transform: rotate(270deg); /* Угол разворота для верхнего левого */
 }
 
 .flowers-bottom-left {
-    bottom: 20px;
-    left: 20px;
+    bottom: -60px;
+    left: -80px;
+    transform: rotate(180deg); /* Угол разворота для верхнего левого */
 }
 
 .flowers-bottom-right {
-    bottom: 20px;
-    right: 20px;
+    bottom: -60px;
+    right: -80px;
+    transform: rotate(450deg); /* Угол разворота для верхнего левого */
 }
 
-/* Контент */
+/* Основной контент */
 .content {
-    position: relative;
-    z-index: 2;
-    color: #444;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #333;
 }
 
 .title {
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-weight: bold;
+    font-size: 2.5em;
+    font-family: 'Playfair Display SC', serif;
+    color: #b71c1c;
 }
 
 .names {
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 3em;
+    color: #880e4f;
+    margin: 0;
+    padding: 0;
 }
 
 .name {
     font-family: 'Great Vibes', cursive;
-    font-size: 60px;
-    color: #b71c1c;
+    font-size: 2em;
     margin: 0;
+    padding: 0;
 }
 
 .and {
-    font-size: 40px;
-    color: #555;
-    margin: 10px 0;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    color: #d32f2f;
+    margin: 0;
+    padding: 0;
 }
 
-.details {
-    font-size: 20px;
-    margin: 15px 0;
-    color: #555;
+.details, .subtitle, .address-text {
+    font-size: 1.2em;
+    color: #424242;
 }
 
-.subtitle {
-    font-size: 24px;
-    margin: 20px 0;
-    color: #444;
+/* Разделители */
+.separator {
+    height: 2px;
+    width: 80%;
+    background: #d32f2f;
+    margin: 5px auto;
+}
+
+.separator-short {
+    height: 1px;
+    width: 40%;
+    background: #b71c1c;
+    margin: 10px auto;
 }
 
 /* Карта */
 .map-container {
-    margin: 0 auto;
-    width: 90%;
-    max-width: 800px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
+    margin-top: 0px;
+    border: 2px solid #b71c1c;
+    border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
