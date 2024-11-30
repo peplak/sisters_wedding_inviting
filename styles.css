@@ -120,6 +120,8 @@ body {
     border: 2px solid #b71c1c;
     border-radius: 5px;
     overflow: hidden;
+    position: relative;
+    height: 350px; /* Фиксированная высота для карты */
 }
 
 /* Адаптивность для мобильных устройств */
@@ -171,7 +173,7 @@ body {
     }
 
     .map-container {
-        height: 250px;
+        height: 300px;
     }
 }
 
@@ -228,7 +230,11 @@ body {
     }
 
     .map-container {
-        height: 220px;
+        height: 280px;
+    }
+
+    .address-text {
+        font-size: 1.1em;
     }
 }
 
@@ -257,7 +263,7 @@ body {
     }
 
     .map-container {
-        height: 180px;
+        height: 250px;
     }
 
     /* Цветы для самых маленьких экранов */
