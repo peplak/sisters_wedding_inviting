@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 .container {
@@ -37,19 +38,19 @@ body {
 .flowers-top-right {
     top: -60px;
     right: -80px;
-    transform: rotate(270deg); /* Угол разворота для верхнего левого */
+    transform: rotate(270deg); /* Угол разворота для верхнего правого */
 }
 
 .flowers-bottom-left {
     bottom: -60px;
     left: -80px;
-    transform: rotate(180deg); /* Угол разворота для верхнего левого */
+    transform: rotate(180deg); /* Угол разворота для нижнего левого */
 }
 
 .flowers-bottom-right {
     bottom: -60px;
     right: -80px;
-    transform: rotate(450deg); /* Угол разворота для верхнего левого */
+    transform: rotate(450deg); /* Угол разворота для нижнего правого */
 }
 
 /* Основной контент */
@@ -58,6 +59,7 @@ body {
     margin: auto;
     text-align: center;
     color: #333;
+    padding: 20px;
 }
 
 .title {
@@ -117,4 +119,116 @@ body {
     border: 2px solid #b71c1c;
     border-radius: 5px;
     overflow: hidden;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2em;
+    }
+
+    .names {
+        font-size: 2.5em;
+        gap: 10px;
+    }
+
+    .name {
+        font-size: 1.5em;
+    }
+
+    .and {
+        font-size: 2em;
+    }
+
+    .details, .subtitle, .address-text {
+        font-size: 1.1em;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+
+    /* Цветы для мобильных */
+    .flowers {
+        width: 250px;
+        height: 250px;
+    }
+
+    .flowers-top-left {
+        top: -40px;
+        left: -60px;
+        transform: rotate(360deg);
+    }
+
+    .flowers-top-right {
+        top: -40px;
+        right: -60px;
+        transform: rotate(270deg);
+    }
+
+    .flowers-bottom-left {
+        bottom: -40px;
+        left: -60px;
+        transform: rotate(180deg);
+    }
+
+    .flowers-bottom-right {
+        bottom: -40px;
+        right: -60px;
+        transform: rotate(450deg);
+    }
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    .names {
+        font-size: 2em;
+        flex-direction: column;
+    }
+
+    .name, .and {
+        font-size: 1.5em;
+    }
+
+    .details, .subtitle, .address-text {
+        font-size: 1em;
+    }
+
+    .map-container {
+        height: 200px;
+    }
+
+    /* Цветы для маленьких экранов */
+    .flowers {
+        width: 200px;
+        height: 200px;
+    }
+
+    .flowers-top-left {
+        top: -30px;
+        left: -50px;
+        transform: rotate(360deg);
+    }
+
+    .flowers-top-right {
+        top: -30px;
+        right: -50px;
+        transform: rotate(270deg);
+    }
+
+    .flowers-bottom-left {
+        bottom: -30px;
+        left: -50px;
+        transform: rotate(180deg);
+    }
+
+    .flowers-bottom-right {
+        bottom: -30px;
+        right: -50px;
+        transform: rotate(450deg);
+    }
 }
