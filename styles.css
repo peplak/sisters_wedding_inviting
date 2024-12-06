@@ -18,6 +18,12 @@ body {
     text-align: center;
     overflow: hidden;
 }
+
+/* Анимация для плавности */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
 .message {
     text-align: center;
     font-family: 'Playfair Display SC', serif;
@@ -41,25 +47,25 @@ body {
 .flowers-top-left {
     top: -60px;
     left: -80px;
-    transform: rotate(360deg); /* Угол разворота для верхнего левого */
+    transform: rotate(360deg);
 }
 
 .flowers-top-right {
     top: -60px;
     right: -80px;
-    transform: rotate(270deg); /* Угол разворота для верхнего правого */
+    transform: rotate(270deg);
 }
 
 .flowers-bottom-left {
     bottom: -60px;
     left: -80px;
-    transform: rotate(180deg); /* Угол разворота для нижнего левого */
+    transform: rotate(180deg);
 }
 
 .flowers-bottom-right {
     bottom: -60px;
     right: -80px;
-    transform: rotate(450deg); /* Угол разворота для нижнего правого */
+    transform: rotate(450deg);
 }
 
 /* Основной контент */
@@ -220,7 +226,7 @@ body {
     .flowers-top-left {
         top: -30px;
         left: -50px;
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
 
     .flowers-top-right {
