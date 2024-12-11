@@ -1,249 +1,119 @@
-/* Основной стиль */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Playfair Display SC', serif;
-    background: linear-gradient(135deg, #fce4ec, #e1f5fe);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow-x: hidden;
-}
 
-.container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    overflow: hidden;
-}
 
 /* Анимация для плавности */
 * {
     transition: all 0.3s ease-in-out;
 }
 
-.message {
-    text-align: center;
-    font-family: 'Playfair Display SC', serif;
-    font-size: 1.5rem;
-    color: #333;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-/* Цветы в углах */
-.flowers {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: url('https://png.klev.club/uploads/posts/2024-06/png-klev-club-yftq-p-buket-tsvetov-shikarnii-png-23.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.flowers-top-left {
-    top: -60px;
-    left: -80px;
-    transform: rotate(360deg);
-}
-
-.flowers-top-right {
-    top: -60px;
-    right: -80px;
-    transform: rotate(270deg);
-}
-
-.flowers-bottom-left {
-    bottom: -60px;
-    left: -80px;
-    transform: rotate(180deg);
-}
-
-.flowers-bottom-right {
-    bottom: -60px;
-    right: -80px;
-    transform: rotate(450deg);
-}
-
-/* Основной контент */
-.content {
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
-    color: #333;
-    padding: 20px;
-}
-
-.title {
-    font-size: 2.5em;
-    font-family: 'Playfair Display SC', serif;
-    color: #b71c1c;
+body {
+  font-family: "Playfair Display SC", serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .names {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    font-size: 3em;
-    color: #880e4f;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 2em;
+  color: #2e0315;
+  margin: 0;
+  padding: 0;
 }
 
 .name {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2em;
-    margin: 0;
-    padding: 0;
+  font-family: "Great Vibes", cursive;
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
 }
 
 .and {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.5em;
-    color: #d32f2f;
-    margin: 0;
-    padding: 0;
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5em;
+  color: #d32f2f;
+  margin: 0;
+  padding: 0;
 }
 
-.details, .subtitle, .address-text {
-    font-size: 1.2em;
-    color: #424242;
+.section {
+  position: relative;
+  text-align: center;
+  padding: 20px;
 }
 
-/* Разделители */
-.separator {
-    height: 2px;
-    width: 80%;
-    background: #d32f2f;
-    margin: 5px auto;
+.full-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden;
 }
 
-.separator-short {
-    height: 1px;
-    width: 40%;
-    background: #b71c1c;
-    margin: 10px auto;
+.background-branch {
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 400px;
+  opacity: 1;
 }
 
-/* Карта */
-.map-container {
-    margin-top: 0px;
-    border: 2px solid #b71c1c;
-    border-radius: 5px;
-    overflow: hidden;
+.main-content {
+  z-index: 1;
+  margin-top: 350px;
 }
 
-/* Адаптивность для мобильных устройств */
+.countdown {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #555;
+}
+
+.scroll-section {
+  background-image: url("img/bg.png");
+  background-size: 428px;
+  padding: 50px 20px;
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.overlay p {
+  margin: 10px 0;
+}
+
+.map {
+  margin-top: 30px;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
-    .title {
-        font-size: 2em;
-    }
+  .background-branch {
+    width: 90%;
+  }
 
-    .names {
-        font-size: 2.5em;
-        gap: 10px;
-    }
+  .countdown {
+    font-size: 1.2em;
+  }
 
-    .name {
-        font-size: 1.5em;
-    }
-
-    .and {
-        font-size: 2em;
-    }
-
-    .details, .subtitle, .address-text {
-        font-size: 1.1em;
-    }
-
-    .map-container {
-        height: 250px;
-    }
-
-    /* Цветы для мобильных */
-    .flowers {
-        width: 250px;
-        height: 250px;
-    }
-
-    .flowers-top-left {
-        top: -40px;
-        left: -60px;
-        transform: rotate(360deg);
-    }
-
-    .flowers-top-right {
-        top: -40px;
-        right: -60px;
-        transform: rotate(270deg);
-    }
-
-    .flowers-bottom-left {
-        bottom: -40px;
-        left: -60px;
-        transform: rotate(180deg);
-    }
-
-    .flowers-bottom-right {
-        bottom: -40px;
-        right: -60px;
-        transform: rotate(450deg);
-    }
-}
-
-/* Адаптивность для маленьких экранов */
-@media (max-width: 480px) {
-    .title {
-        font-size: 1.5em;
-    }
-
-    .names {
-        font-size: 2em;
-        flex-direction: column;
-    }
-
-    .name, .and {
-        font-size: 1.5em;
-    }
-
-    .details, .subtitle, .address-text {
-        font-size: 1em;
-    }
-
-    .map-container {
-        height: 200px;
-    }
-
-    /* Цветы для маленьких экранов */
-    .flowers {
-        width: 100px;
-        height: 100px;
-    }
-
-    .flowers-top-left {
-        top: -30px;
-        left: -50px;
-        transform: rotate(0deg);
-    }
-
-    .flowers-top-right {
-        top: -30px;
-        right: -50px;
-        transform: rotate(270deg);
-    }
-
-    .flowers-bottom-left {
-        bottom: -30px;
-        left: -50px;
-        transform: rotate(180deg);
-    }
-
-    .flowers-bottom-right {
-        bottom: -30px;
-        right: -50px;
-        transform: rotate(450deg);
-    }
+  .overlay {
+    font-size: 1em;
+    padding: 15px;
+  }
 }
